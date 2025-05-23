@@ -1,6 +1,6 @@
 import json
 import pyautogui
-from src.utils import find_image_on_screen
+from app.src.utils import find_image_on_screen
 
 class Executor:
     def __init__(self, input_file="recording/actions.json"):

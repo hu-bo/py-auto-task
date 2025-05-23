@@ -10,6 +10,7 @@ def capture_screenshot():
 
 def detect_text(image, x, y, radius=50):
     h, w, _ = image.shape
+    x, y = int(x), int(y)
     x1, y1 = max(0, x - radius), max(0, y - radius)
     x2, y2 = min(w, x + radius), min(h, y + radius)
     cropped = image[y1:y2, x1:x2]

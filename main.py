@@ -1,17 +1,17 @@
-from src.recorder import Recorder
-from src.executor import Executor
+import webview
+from app.api import Api
 
 def main():
-    print("选择模式: 1. 录制行为  2. 执行行为")
-    choice = input("请输入模式编号: ")
-    if choice == "1":
-        recorder = Recorder()
-        recorder.start_recording()
-    elif choice == "2":
-        executor = Executor()
-        executor.execute_actions()
-    else:
-        print("无效选择，请重试。")
+    # 创建 API 实例
+    api = Api()
+
+    # 启动 WebView 窗口
+    webview.create_window(
+        title="任务管理界面",
+        url="web/index.html",  # 指向 HTML 文件路径
+        js_api=api  # 绑定 API
+    )
+    webview.start()
 
 if __name__ == "__main__":
     main()

@@ -2,3 +2,4 @@ pynput
 opencv-python
 pytesseract
 pyautogui
+pywebview

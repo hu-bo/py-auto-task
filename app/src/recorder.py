@@ -2,7 +2,7 @@ import json
 import cv2
 import pytesseract
 from pynput import mouse
-from src.utils import capture_screenshot, detect_text
+from app.src.utils import capture_screenshot, detect_text
 
 class Recorder:
     def __init__(self, output_file="recording/actions.json"):
