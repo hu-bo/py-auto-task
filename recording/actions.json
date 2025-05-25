@@ -1,8 +1,30 @@
-[
-    {
-        "type": "click",
-        "x": 548.1824340820312,
-        "y": 863.409423828125,
-        "text": null
-    }
-]
+{
+    "id": "c376066f-7010-478a-b08c-e860a78127ce",
+    "actions": [
+        {
+            "id": "21292fa0-246a-4f98-9261-eaed2c797fcb",
+            "type": "click",
+            "x": 548,
+            "y": 548,
+            "text": "A\n\n",
+            "image": "E:\\Project\\B\\py-auto-task\\images\\ce43adf0-dae7-4871-8fe3-e50947156ddb.png"
+        },
+        {
+            "id": "306052bd-9591-4779-98fa-a54ad6725283",
+            "type": "click",
+            "x": 1878,
+            "y": 1441,
+            "text": "\u53d6 \u6d88\n\n",
+            "image": "E:\\Project\\B\\py-auto-task\\images\\604c7433-e0a4-4265-a319-52e3665c4f83.png"
+        },
+        {
+            "id": "b78df4c5-5ac9-4363-bb6c-3ceed3d1cf4c",
+            "type": "click",
+            "x": 1754,
+            "y": 1572,
+            "text": "",
+            "image": "E:\\Project\\B\\py-auto-task\\images\\07d314f5-450a-4565-88ce-cdf3702da12b.png"
+        }
+    ],
+    "description": "\u5f55\u5236\u7684\u884c\u4e3a"
+}

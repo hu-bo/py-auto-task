@@ -1,5 +1,7 @@
 pynput
 opencv-python
-pytesseract
+easyocr
 pyautogui
 pywebview
+torch
+numpy==1.22.4
