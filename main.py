@@ -8,10 +8,11 @@ def run_webview(api):
     # 启动 WebView 窗口
     webview.create_window(
         title="任务管理界面",
-        url="http://localhost:5173/",  # 指向 HTML 文件路径
+        # url="http://localhost:5173/",  # 指向 HTML 文件路径
+        url="http://10.23.40.20:8080",  # 指向 HTML 文件路径
         js_api=api
     )
-    webview.start()
+    webview.start(debug=True)
 
 def main():
     # 创建 API 实例

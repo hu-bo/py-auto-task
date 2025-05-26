@@ -13,7 +13,7 @@ class Executor:
 
         for action in actions.get("actions", []):
             if action["type"] == "click":
-                if action["image"]:
+                if action["text"]:
                     print(f"尝试通过文字 '{action['text']}' 定位...")
                     # 模拟点击（此处可扩展为基于文字定位）
                     # 截图

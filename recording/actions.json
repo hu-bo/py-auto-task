@@ -1,29 +1,129 @@
 {
-    "id": "c376066f-7010-478a-b08c-e860a78127ce",
+    "id": "070c6d93-a599-4104-9330-78e14c7d9127",
     "actions": [
         {
-            "id": "21292fa0-246a-4f98-9261-eaed2c797fcb",
+            "id": "7b4b1f66-9d19-4af9-a07a-f2b363b8362b",
             "type": "click",
-            "x": 548,
-            "y": 548,
-            "text": "A\n\n",
-            "image": "E:\\Project\\B\\py-auto-task\\images\\ce43adf0-dae7-4871-8fe3-e50947156ddb.png"
-        },
-        {
-            "id": "306052bd-9591-4779-98fa-a54ad6725283",
-            "type": "click",
-            "x": 1878,
-            "y": 1441,
-            "text": "\u53d6 \u6d88\n\n",
-            "image": "E:\\Project\\B\\py-auto-task\\images\\604c7433-e0a4-4265-a319-52e3665c4f83.png"
-        },
-        {
-            "id": "b78df4c5-5ac9-4363-bb6c-3ceed3d1cf4c",
-            "type": "click",
-            "x": 1754,
-            "y": 1572,
+            "x": 1555,
+            "y": 1571,
             "text": "",
-            "image": "E:\\Project\\B\\py-auto-task\\images\\07d314f5-450a-4565-88ce-cdf3702da12b.png"
+            "image": "E:\\Project\\B\\py-auto-task\\images\\08207bbb-ca33-49e2-9243-7c99750b17ff.png"
+        },
+        {
+            "id": "0c174fc2-d396-440e-9c3f-087a8a46d21b",
+            "type": "click",
+            "x": 2246,
+            "y": 33,
+            "text": "",
+            "image": "E:\\Project\\B\\py-auto-task\\images\\0bf7edd6-8033-4d35-9efe-b8339dc452b5.png"
+        },
+        {
+            "type": "key_press",
+            "key": "w"
+        },
+        {
+            "type": "key_press",
+            "key": "w"
+        },
+        {
+            "type": "key_press",
+            "key": "w"
+        },
+        {
+            "type": "key_press",
+            "key": "Key.shift"
+        },
+        {
+            "type": "key_press",
+            "key": "."
+        },
+        {
+            "type": "key_press",
+            "key": "b"
+        },
+        {
+            "type": "key_press",
+            "key": "a"
+        },
+        {
+            "type": "key_press",
+            "key": "i"
+        },
+        {
+            "type": "key_press",
+            "key": "d"
+        },
+        {
+            "type": "key_press",
+            "key": "u"
+        },
+        {
+            "type": "key_press",
+            "key": "."
+        },
+        {
+            "type": "key_press",
+            "key": "c"
+        },
+        {
+            "type": "key_press",
+            "key": "o"
+        },
+        {
+            "type": "key_press",
+            "key": "m"
+        },
+        {
+            "type": "key_press",
+            "key": "Key.enter"
+        },
+        {
+            "id": "7c8b3d92-8b66-4ab8-873d-5a1d2e9dcfdf",
+            "type": "click",
+            "x": 681,
+            "y": 177,
+            "text": "",
+            "image": "E:\\Project\\B\\py-auto-task\\images\\a01297f1-bc51-4a86-950a-bfae54d9ded0.png"
+        },
+        {
+            "type": "key_press",
+            "key": "Key.shift"
+        },
+        {
+            "type": "key_press",
+            "key": "h"
+        },
+        {
+            "type": "key_press",
+            "key": "e"
+        },
+        {
+            "type": "key_press",
+            "key": "l"
+        },
+        {
+            "type": "key_press",
+            "key": "l"
+        },
+        {
+            "type": "key_press",
+            "key": "o"
+        },
+        {
+            "type": "key_press",
+            "key": "Key.shift"
+        },
+        {
+            "type": "key_press",
+            "key": "Key.enter"
+        },
+        {
+            "id": "5eee1ebf-f47d-47f4-8fd9-cd0f2e29763a",
+            "type": "click",
+            "x": 297,
+            "y": 477,
+            "text": "",
+            "image": "E:\\Project\\B\\py-auto-task\\images\\0100d9c2-0104-425d-9441-2ea5ea114a5f.png"
         }
     ],
     "description": "\u5f55\u5236\u7684\u884c\u4e3a"
