@@ -1,7 +1,7 @@
 import cv2
 import pytesseract
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 class ImageTextDetector:
     def __init__(self, image, lang="eng+chi_sim", preprocess=True):

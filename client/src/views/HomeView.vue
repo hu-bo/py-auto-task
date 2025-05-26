@@ -7,6 +7,8 @@
     <!-- 操作区域 -->
     <div id="operation-area">
       <button @click="startRecording">录制任务</button>
+
+      <button @click="stopRecording">停止录制</button>
     </div>
 
     <!-- 表格区域 -->
@@ -62,6 +64,14 @@ const runTask = async (taskId) => {
 // 开始录制任务
 const startRecording = async () => {
   const response = await window.pywebview.api.start_recording();
+  // notification.success({
+  //   message: "Success",
+  //   description: response,
+  //   duration: 5,
+  // });
+};
+const stopRecording = async () => {
+  const response = await window.pywebview.api.stop_recording();
   // notification.success({
   //   message: "Success",
   //   description: response,

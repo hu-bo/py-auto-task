@@ -2,17 +2,16 @@ import os
 import cv2
 import pyautogui
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import uuid
 
 def capture_and_crop(x, y, width=80, height=60):
     # Step 1: Capture screenshot
     screenshot = pyautogui.screenshot()
     screenshot = cv2.cvtColor(np.array(screenshot), cv2.COLOR_RGB2BGR)
-
     # Step 2: Crop the initial region
-    x1, y1 = max(0, x - width // 2), max(0, y - height // 2)
-    x2, y2 = x + width // 2, y + height // 2
+    x1, y1 = max(0, int(x - width // 2)), max(0, int(y - height // 2))
+    x2, y2 = int(x + width // 2), int(y + height // 2)
     cropped = screenshot[y1:y2, x1:x2]
 
     # Step 3: Convert to grayscale and preprocess
