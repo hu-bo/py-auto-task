@@ -1,129 +1,53 @@
 {
-    "id": "070c6d93-a599-4104-9330-78e14c7d9127",
+    "id": "8fb9c831-37ac-4790-9d38-b3ce5b8e3b0e",
     "actions": [
         {
-            "id": "7b4b1f66-9d19-4af9-a07a-f2b363b8362b",
+            "id": "d8f595fd-e597-4468-a43e-8800e640348f",
             "type": "click",
-            "x": 1555,
-            "y": 1571,
+            "x": 1380,
+            "y": 1567,
             "text": "",
-            "image": "E:\\Project\\B\\py-auto-task\\images\\08207bbb-ca33-49e2-9243-7c99750b17ff.png"
+            "image": "E:\\Project\\B\\py-auto-task\\images\\06161ee4-2e24-4c79-aa5c-963d66be6508.png"
         },
         {
-            "id": "0c174fc2-d396-440e-9c3f-087a8a46d21b",
+            "id": "07c96aa2-ab6c-4674-a5e5-76efdd133cb3",
             "type": "click",
-            "x": 2246,
+            "x": 2247,
+            "y": 25,
+            "text": "",
+            "image": "E:\\Project\\B\\py-auto-task\\images\\f60e4679-084a-42b8-b446-18923576f493.png"
+        },
+        {
+            "id": "cee0f355-b6b0-451a-8ae3-2ed8fe98ea6d",
+            "type": "click",
+            "x": 2254,
+            "y": 30,
+            "text": "",
+            "image": "E:\\Project\\B\\py-auto-task\\images\\f8c4995f-4b32-4322-92e4-f70849fa8619.png"
+        },
+        {
+            "id": "40fe338e-56dc-4698-b71f-d8d62ca114ff",
+            "type": "click",
+            "x": 2254,
+            "y": 30,
+            "text": "",
+            "image": "E:\\Project\\B\\py-auto-task\\images\\d51e22e5-e040-4c0a-b84c-25db7b30f419.png"
+        },
+        {
+            "id": "c917a25b-dac7-40d6-bf94-105c8e278ad1",
+            "type": "click",
+            "x": 2254,
             "y": 33,
             "text": "",
-            "image": "E:\\Project\\B\\py-auto-task\\images\\0bf7edd6-8033-4d35-9efe-b8339dc452b5.png"
+            "image": "E:\\Project\\B\\py-auto-task\\images\\9867d494-32b5-45eb-9c83-0b864f58515e.png"
         },
         {
-            "type": "key_press",
-            "key": "w"
-        },
-        {
-            "type": "key_press",
-            "key": "w"
-        },
-        {
-            "type": "key_press",
-            "key": "w"
-        },
-        {
-            "type": "key_press",
-            "key": "Key.shift"
-        },
-        {
-            "type": "key_press",
-            "key": "."
-        },
-        {
-            "type": "key_press",
-            "key": "b"
-        },
-        {
-            "type": "key_press",
-            "key": "a"
-        },
-        {
-            "type": "key_press",
-            "key": "i"
-        },
-        {
-            "type": "key_press",
-            "key": "d"
-        },
-        {
-            "type": "key_press",
-            "key": "u"
-        },
-        {
-            "type": "key_press",
-            "key": "."
-        },
-        {
-            "type": "key_press",
-            "key": "c"
-        },
-        {
-            "type": "key_press",
-            "key": "o"
-        },
-        {
-            "type": "key_press",
-            "key": "m"
-        },
-        {
-            "type": "key_press",
-            "key": "Key.enter"
-        },
-        {
-            "id": "7c8b3d92-8b66-4ab8-873d-5a1d2e9dcfdf",
+            "id": "44c6b9c6-d159-4727-93ac-0038d228f630",
             "type": "click",
-            "x": 681,
-            "y": 177,
+            "x": 2254,
+            "y": 33,
             "text": "",
-            "image": "E:\\Project\\B\\py-auto-task\\images\\a01297f1-bc51-4a86-950a-bfae54d9ded0.png"
-        },
-        {
-            "type": "key_press",
-            "key": "Key.shift"
-        },
-        {
-            "type": "key_press",
-            "key": "h"
-        },
-        {
-            "type": "key_press",
-            "key": "e"
-        },
-        {
-            "type": "key_press",
-            "key": "l"
-        },
-        {
-            "type": "key_press",
-            "key": "l"
-        },
-        {
-            "type": "key_press",
-            "key": "o"
-        },
-        {
-            "type": "key_press",
-            "key": "Key.shift"
-        },
-        {
-            "type": "key_press",
-            "key": "Key.enter"
-        },
-        {
-            "id": "5eee1ebf-f47d-47f4-8fd9-cd0f2e29763a",
-            "type": "click",
-            "x": 297,
-            "y": 477,
-            "text": "",
-            "image": "E:\\Project\\B\\py-auto-task\\images\\0100d9c2-0104-425d-9441-2ea5ea114a5f.png"
+            "image": ""
         }
     ],
     "description": "\u5f55\u5236\u7684\u884c\u4e3a"

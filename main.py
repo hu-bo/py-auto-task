@@ -9,7 +9,7 @@ def run_webview(api):
     webview.create_window(
         title="任务管理界面",
         # url="http://localhost:5173/",  # 指向 HTML 文件路径
-        url="http://10.23.40.20:8080",  # 指向 HTML 文件路径
+        url="http://localhost:4173/",  # 指向 HTML 文件路径
         js_api=api
     )
     webview.start(debug=True)
