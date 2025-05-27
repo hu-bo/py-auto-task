@@ -2,7 +2,7 @@ import os
 import cv2
 import pyautogui
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import uuid
 import io
 from PIL import Image
