@@ -3,8 +3,8 @@ import uuid
 import sys
 from concurrent.futures import ThreadPoolExecutor
 from pynput import mouse, keyboard
-from autotask.utils import capture_and_crop, upload_image
-from autotask.image_text_detector import ImageTextDetector
+from taskmaster.utils import capture_and_crop, upload_image
+from taskmaster.image_text_detector import ImageTextDetector
 
 class Recorder:
     def __init__(self, output_file="recording/actions.json"):
@@ -14,6 +14,7 @@ class Recorder:
         self.executor = ThreadPoolExecutor(max_workers=4) 
 
     def on_click(self, x, y, button, pressed):
+        print(f"鼠标点击位置: ({x}, {y}), 按钮: {button}, 按下状态: {pressed}")
         if pressed:
             screenshot = capture_and_crop(x, y)
             action = {
@@ -30,35 +31,38 @@ class Recorder:
             print(f"记录行为: {action}")
 
     def process_action(self, action, screenshot):
+        ## screenshot不存在 = None
         try:
-            text_detector = ImageTextDetector(screenshot)
-            # 执行耗时任务
-            text = text_detector.detect_text()
-            image_url = upload_image(text_detector.image)
-
-            # 更新 action 的 text 和 image
-            action["text"] = text
-            action["image"] = image_url
+            if screenshot is None:
+                print("截图失败，无法处理行为")
+            else:
+                text_detector = ImageTextDetector(screenshot)
+                # 执行耗时任务
+                text = text_detector.detect_text()
+                image_url = upload_image(text_detector.image)
+                # 更新 action 的 text 和 image
+                action["text"] = text
+                action["image"] = image_url
             print(f"更新行为: {action}")
         except Exception as e:
             print(f"处理行为时发生错误: {e}")
     def on_key_press(self, key):
-        print(self.status)
-        if self.status == "recording":
-            if key == keyboard.Key.f4:
-                self.stop_recording()
-                print("F4 键被按下，停止录制...")
-                return False
-            action = {
-                "type": "key_press",
-                "key": key.char if hasattr(key, 'char') else str(key)
-            }
-            self.actions.append(action)
-            print(f"记录键盘行为: {action}")
-        elif self.status == "stopped":
-            if key == keyboard.Key.f4:
-                sys.exit(0)
-                return False
+        print(f"按键被按下: {key}")
+        # if self.status == "recording":
+        #     if key == keyboard.Key.f4:
+        #         self.stop_recording()
+        #         print("F4 键被按下，停止录制...")
+        #         return False
+        #     action = {
+        #         "type": "key_press",
+        #         "key": key.char if hasattr(key, 'char') else str(key)
+        #     }
+        #     self.actions.append(action)
+        #     print(f"记录键盘行为: {action}")
+        # elif self.status == "stopped":
+        #     if key == keyboard.Key.f4:
+        #         sys.exit(0)
+        #         return False
 
     def start_recording(self):
         print("开始录制行为，按 F4 停止...")
@@ -67,13 +71,14 @@ class Recorder:
         self.actions = []
         try:
             # 初始化鼠标监听器
-            self.mouse_listener = mouse.Listener(on_click=self.on_click)
-            self.mouse_listener.start()
+            # self.mouse_listener = mouse.Listener(on_click=self.on_click)
+            # self.mouse_listener.start()
 
             # 初始化键盘监听器
             self.keyboard_listener = keyboard.Listener(on_press=self.on_key_press)
             self.keyboard_listener.start()
-        except KeyboardInterrupt:
+        except Exception as e:
+            print(f"Failed to start keyboard listener: {e}")
             print("录制结束，保存行为...")
             sys.exit(0)
             self.stop_recording()

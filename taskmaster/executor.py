@@ -1,6 +1,6 @@
 import json
 import pyautogui
-from autotask.utils import find_image_in_screenshot
+from taskmaster.utils import find_image_in_screenshot
 
 class Executor:
     def __init__(self, input_file="recording/actions.json"):

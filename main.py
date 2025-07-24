@@ -1,30 +1,26 @@
 import threading
 import webview
-from autotask.api import Api
+from taskmaster.api import Api
 
 
 
 def run_webview(api):
     # 启动 WebView 窗口
-    webview.create_window(
+    window = webview.create_window(
         title="任务管理界面",
-        # url="http://localhost:5173/",  # 指向 HTML 文件路径
-        url="http://10.23.40.20:8080",  # 指向 HTML 文件路径
+        url="http://localhost:5173/",  # 指向 HTML 文件路径
+        # url="http://127.0.0.1:4173",  # 指向 HTML 文件路径
         js_api=api
     )
+    # 绑定快捷键
+    window.events.key_press += api.recorder.on_key_press
     webview.start(debug=True)
 
 def main():
     # 创建 API 实例
     api = Api()
-
+    # api.start_recording()  # 启动录制任务
     run_webview(api)
-
-    try:
-        while True:
-            pass
-    except KeyboardInterrupt:
-        print("应用程序被用户中断。正在退出...")
 
 if __name__ == "__main__":
     main()

@@ -1,13 +1,14 @@
 import os
 import json
-from autotask.executor import Executor
-from autotask.recorder import Recorder
+from taskmaster.executor import Executor
+from taskmaster.recorder import Recorder
 
 
 class Api:
-    def __init__(self):
+    def __init__(self, window=None):
         self.recorder = Recorder()
         self.recording_dir = "recording"  # 任务文件存储目录
+        self.window = window
 
     def start_recording(self):
         """启动录制任务"""

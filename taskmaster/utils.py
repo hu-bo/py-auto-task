@@ -16,32 +16,30 @@ def capture_and_crop(x, y, width=80, height=60):
 
     # Step 3: Convert to grayscale and preprocess
     gray = cv2.cvtColor(cropped, cv2.COLOR_BGR2GRAY)
-
-    # Step 4: Check if the image is pure white or pure black
-    if np.all(gray == 255):  # Pure white
-        print("Detected pure white image, skipping further cropping.")
-        return cropped
-    if np.all(gray == 0):  # Pure black
-        print("Detected pure black image, skipping further cropping.")
-        return cropped
+    return gray
+    if gray.size > 0:
+        first_pixel = gray[0, 0]
+        if np.all(gray == first_pixel):
+            print(f"Detected image with all pixels of value {first_pixel}, skipping further cropping.")
+            return None
     # Step 5: Threshold the image
     _, binary = cv2.threshold(gray, 128, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 
     # # Step 6: Find contours
-    # contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-    # # Step 7: Calculate the bounding box of all contours
-    # if contours:
-    #     # Merge all contours into a single bounding box
-    #     x, y, w, h = cv2.boundingRect(np.vstack(contours))
+    # Step 7: Calculate the bounding box of all contours
+    if contours:
+        # Merge all contours into a single bounding box
+        x, y, w, h = cv2.boundingRect(np.vstack(contours))
 
-    #     # Ensure the cropping region is within bounds
-    #     height, width = cropped.shape[:2]
-    #     x1, y1 = max(0, x), max(0, y)
-    #     x2, y2 = min(width, x + w), min(height, y + h)
+        # Ensure the cropping region is within bounds
+        height, width = cropped.shape[:2]
+        x1, y1 = max(0, x), max(0, y)
+        x2, y2 = min(width, x + w), min(height, y + h)
 
-    #     # Step 8: Crop to the bounding box
-    #     cropped = cropped[y1:y2, x1:x2]
+        # Step 8: Crop to the bounding box
+        cropped = cropped[y1:y2, x1:x2]
 
     return cropped
 
